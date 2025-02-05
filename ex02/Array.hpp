@@ -13,16 +13,17 @@ class Array{
 
         Array(unsigned int n){
             arr = NULL;
-            if (n <= 0)
-                throw 5;
+            len = n;
             try{
                 arr = new T[n]; 
             }
             catch (std::bad_alloc &e)
             {
+                // std::cout << arr << std::endl;
+                // std::cout << len << std::endl;
+                len = 0;
                 std::cerr << e.what() << std::endl;
             }
-            len = n;
         }
 
         ~Array(){

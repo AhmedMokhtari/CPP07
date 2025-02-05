@@ -9,8 +9,7 @@ int main( void ) {
     for (unsigned  int i = 0;  i < arrStr.size() ; i++)
         arrStr[i] = "ALo test";
 
-
-     for (unsigned int i = 0;  i < arrStr.size() ; i++)
+    for (unsigned int i = 0;  i < arrStr.size() ; i++)
         std::cout << arrStr[i] << " ";
     std::cout << std::endl;
     Array<int> arr1 = arr;
@@ -32,5 +31,6 @@ int main( void ) {
     }catch(std::out_of_range &e){
         std::cerr << e.what() << std::endl;
     }
+
     return 0;
 }
