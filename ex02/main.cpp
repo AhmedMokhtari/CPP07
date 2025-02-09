@@ -31,6 +31,11 @@ int main( void ) {
     }catch(std::out_of_range &e){
         std::cerr << e.what() << std::endl;
     }
-
+    const Array<int> a(5);
+    for (int i = 0; i < 5;i++)
+    {
+        std::cout << a[i] << " ";
+    }
+    std::cout << std::endl;
     return 0;
 }

@@ -1,3 +1,4 @@
+#pragma once
 template <typename T>
 T min(T t1, T t2)
 {

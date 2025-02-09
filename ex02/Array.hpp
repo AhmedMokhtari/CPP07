@@ -1,3 +1,5 @@
+#pragma once
+
 #include <stdexcept>
 
 template <typename T>
@@ -19,8 +21,6 @@ class Array{
             }
             catch (std::bad_alloc &e)
             {
-                // std::cout << arr << std::endl;
-                // std::cout << len << std::endl;
                 len = 0;
                 std::cerr << e.what() << std::endl;
             }
@@ -65,15 +65,16 @@ class Array{
                 throw std::out_of_range("index out of rangeeee");
             return arr[idx];
         }
+
+        T& operator[](unsigned int idx) const
+        {
+            if (idx >= len)
+                throw std::out_of_range("index out of rangeeee");
+            return arr[idx];
+        }
+
+
         size_t size() const{
             return len;
         }
 };
-
-
-
-        // Array();
-        // Array(unsigned int n);
-        // Ãrray();
-        // Array &Array(const Array &cp);
-        // Array &operator=(const Array &cp);
